@@ -10,6 +10,8 @@ function reducer(store = defaultStore, action) {
       return { ...store, count: store.count + 1 };
     case 'DECREMENT_COUNTER':
       return { ...store, count: store.count - 1 };
+    case 'ADD_AMOUNT':
+      return { ...store, count: store.count + parseInt(action.payload) };
     default:
       return store;
   }
