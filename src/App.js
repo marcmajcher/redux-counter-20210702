@@ -1,21 +1,18 @@
-import { useState } from 'react';
 import './App.css';
 import ClickButton from './ClickButton';
 import ClickCounter from './ClickCounter';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 function App() {
-  const [counter, setCounter] = useState(0);
-
-  function handleClick() {
-    setCounter(counter + 1);
-  }
-
   return (
-    <div className="App">
-      <h1> Here's my super cool click counter</h1>
-      <ClickButton handleClick={handleClick} />
-      <ClickCounter counter={counter} />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <h1> Here's my super cool click counter</h1>
+        <ClickButton />
+        <ClickCounter />
+      </div>
+    </Provider>
   );
 }
 

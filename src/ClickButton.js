@@ -1,5 +1,5 @@
-import ClickButtonContainer from "./ClickButtonContainer";
+import ClickButtonContainer from './ClickButtonContainer';
 
-export default function ClickButton(props) {
-  return <ClickButtonContainer handleClick={props.handleClick} />
+export default function ClickButton() {
+  return <ClickButtonContainer />;
 }

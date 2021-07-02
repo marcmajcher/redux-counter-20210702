@@ -1,5 +1,5 @@
-import ClickCounterContainer from "./ClickCounterContainer";
+import ClickCounterContainer from './ClickCounterContainer';
 
-export default function ClickCounter(props) {
-  return <ClickCounterContainer counter={props.counter} />
+export default function ClickCounter() {
+  return <ClickCounterContainer />;
 }
